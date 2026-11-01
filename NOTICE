@@ -1,0 +1,29 @@
+security-audit-lean
+Modifications (c) 2026 Jens Abrahamsson
+
+This work is derived from cloudflare/security-audit-skill @ c1c8a8c
+(https://github.com/cloudflare/security-audit-skill), licensed under the MIT License,
+Copyright (c) 2025-2026 Cloudflare, Inc. The full upstream license text is in LICENSE
+and applies to the upstream portions and to this derived work.
+
+Copied unchanged from upstream (skills/security-audit/):
+  classes/ATTACK-CLASSES.md and the ten companion files
+  (AI-AND-LLM, CLIENT-SIDE, CLOUD-AND-DEPLOYMENT, DATA-ISOLATION-AND-LIFECYCLE,
+  DESKTOP-MOBILE-AND-LOCAL-IPC, MEMORY-SAFETY-AND-BINARY, PROTOCOLS-RPC-AND-MESSAGING,
+  RESOURCE-EXHAUSTION-AND-AVAILABILITY, SUPPLY-CHAIN-AND-RELEASE, WEB-PROTOCOL-AND-AUTH),
+  scripts/report-schema.json, scripts/validate-findings.cjs,
+  scripts/validate-coverage-ledger.cjs.
+
+Verbatim excerpts with lean notes added:
+  reference/LEDGER.md   (from RECONNAISSANCE.md: architecture summary and ledger)
+  reference/RECORDS.md  (from VALIDATION-AND-REPORTING.md: Phase 4 and Phase 6,
+                         plus a field summary of report-schema.json)
+
+Rewritten or new (modifications):
+  SKILL.md (lean orchestration replacing upstream SKILL.md, RECONNAISSANCE.md,
+  HUNTING.md and VALIDATION-AND-REPORTING.md flow), agents/sec-lean-*.md (adapted
+  upstream hunter method, candidate gate and verifier steps), scripts/ledger-tool.cjs,
+  scripts/inventory.cjs, scripts/agent-cap.sh, rg-lean.conf,
+  templates/settings.template.json, templates/scope.example.md, README.md.
+
+Not included from upstream: README.md, the validator test files (*.test.cjs).
